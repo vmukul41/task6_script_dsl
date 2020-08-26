@@ -10,10 +10,9 @@ job('job1(dev_push_git)'){
   
     steps {
         shell('''
-if cd /root/ | grep task6 
+if ls /root/ | grep task6 
 then                 
 echo "already present"
-rm -rf /root/task6
 sudo cp -rvf * /root/task6                 
 else
 sudo mkdir /root/task6 
